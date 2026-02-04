@@ -3,7 +3,7 @@ import fs from "fs";
 
 const CONFIG = {
   targetURL: "https://www.bershka.com/ae/men/clothes/view-all-c1010834564.html",
-  targetProductsCount: 49,
+  targetProductsCount: 1000,
   scrollDelay: 2000,
   outputFile: "products.json",
 };
@@ -128,6 +128,8 @@ const scrapeClothes = async () => {
     await page.waitForSelector("li.grid-item", { timeout: 30000 });
 
     const products = [];
+    const processedUrls = new Set();
+    let lastProcessedIndex = 0;
     let noChangeCount = 0;
 
     while (products.length < CONFIG.targetProductsCount) {
@@ -138,7 +140,8 @@ const scrapeClothes = async () => {
       const cardHandles = await page.$$("li.grid-item");
       const totalCards = cardHandles.length;
 
-      for (const cardHandle of cardHandles) {
+      for (let i = lastProcessedIndex; i < cardHandles.length; i++) {
+        const cardHandle = cardHandles[i];
         await cardHandle.evaluate((el) =>
           el.scrollIntoView({ block: "center" }),
         );
@@ -153,8 +156,8 @@ const scrapeClothes = async () => {
         );
 
         if (data.title && data.productUrl && isClothing) {
-          const exists = products.some((p) => p.title === data.title);
-          if (!exists) {
+          if (!processedUrls.has(data.productUrl)) {
+            processedUrls.add(data.productUrl);
             products.push({
               title: data.title,
               price: data.price,
@@ -166,6 +169,8 @@ const scrapeClothes = async () => {
           }
         }
       }
+
+      lastProcessedIndex = totalCards;
 
       const newProductsCount = products.length - prevCount;
       console.log(
