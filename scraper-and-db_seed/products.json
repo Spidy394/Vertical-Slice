@@ -2696,27 +2696,11 @@
     "stockStatus": "Available"
   },
   {
-    "title": "Dress shoes",
-    "price": "299.00",
-    "currency": "AED",
-    "imageUrl": "https://static.bershka.net/assets/public/0825/c3d9/5af546089d76/6b9621bb900c/12603764040-a4o/12603764040-a4o.jpg?w=1920",
-    "productUrl": "https://www.bershka.com/ae/dress-shoes-c0p204066971.html?colorId=040",
-    "stockStatus": "Available"
-  },
-  {
     "title": "Faux fur print jumper",
     "price": "269.00",
     "currency": "AED",
     "imageUrl": "https://static.bershka.net/assets/public/fdb5/fb66/449548bdad2e/378a7f4c6c89/07349596800-a4o/07349596800-a4o.jpg?w=1920",
     "productUrl": "https://www.bershka.com/ae/faux-fur-print-jumper-c0p204066966.html?colorId=800",
-    "stockStatus": "Available"
-  },
-  {
-    "title": "Dress ankle boots",
-    "price": "349.00",
-    "currency": "AED",
-    "imageUrl": "https://static.bershka.net/assets/public/df2d/6659/47574ef0b30f/71ffc4d651ef/12103764040-a4o/12103764040-a4o.jpg?w=1920",
-    "productUrl": "https://www.bershka.com/ae/dress-ankle-boots-c0p204066965.html?colorId=040",
     "stockStatus": "Available"
   },
   {
@@ -2837,14 +2821,6 @@
     "currency": "AED",
     "imageUrl": "https://static.bershka.net/assets/public/838b/8bc4/7ab74a6d94f2/8f53cfaa3bac/07427190818-a4o/07427190818-a4o.jpg?w=1920",
     "productUrl": "https://www.bershka.com/ae/printed-zip-up-hoodie-c0p204066887.html?colorId=818",
-    "stockStatus": "Available"
-  },
-  {
-    "title": "Dress moc toe shoes",
-    "price": "299.00",
-    "currency": "AED",
-    "imageUrl": "https://static.bershka.net/assets/public/6c59/c4ee/dd5243c28bce/5f5c1ec0b3b3/12620764040-a4o/12620764040-a4o.jpg?w=1920",
-    "productUrl": "https://www.bershka.com/ae/dress-moc-toe-shoes-c0p204066873.html?colorId=040",
     "stockStatus": "Available"
   },
   {
