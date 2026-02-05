@@ -13,8 +13,8 @@ export default async function Home(props: {
 
   const { products } = await getProducts({
     query,
-    page: 1, 
-    limit: 12, 
+    page: 1,
+    limit: 12,
   });
 
   return (
@@ -44,7 +44,9 @@ export default async function Home(props: {
             <InfiniteProductList initialProducts={products} query={query} />
           ) : (
             <div className="text-center py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-              <h2 className="text-lg sm:text-xl font-semibold mb-2">No Products Found</h2>
+              <h2 className="text-lg sm:text-xl font-semibold mb-2">
+                No Products Found
+              </h2>
               <p className="text-muted-foreground text-sm max-w-md mx-auto">
                 {query ? (
                   <>
