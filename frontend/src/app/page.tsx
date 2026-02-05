@@ -22,7 +22,7 @@ export default async function Home(props: {
       {/* Minimalist Container */}
       <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Header Section */}
-        <header className="mb-6 sm:mb-8 lg:mb-12">
+        <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 border-b mb-6 sm:mb-8 lg:mb-12 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
               ShopUp
