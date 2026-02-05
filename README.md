@@ -28,8 +28,7 @@
 ```bash
 cd frontend
 npm install
-node index.js // for scraping
-node seed.js  // for seeding the database
+npm start 
 ```
 
 ### Scraper & Database Seed
@@ -37,5 +36,6 @@ node seed.js  // for seeding the database
 ```bash
 cd scraper-and-db_seed
 npm install
-npm start
+node index.js // for scraping
+node seed.js  // for seeding the database
 ```
