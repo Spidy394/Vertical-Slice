@@ -35,11 +35,11 @@ export function SearchInput() {
         type="search"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search for products..."
-        className="pl-10 h-10 text-sm bg-secondary/50 border-0 focus-visible:ring-1"
+        placeholder="Search products..."
+        className="pl-9 sm:pl-10 h-9 sm:h-10 text-sm bg-secondary/50 border-0 focus-visible:ring-1 rounded-full"
         aria-label="Search for products"
       />
-      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <div className="absolute inset-y-0 left-0 pl-2.5 sm:pl-3 flex items-center pointer-events-none">
         <Search className="h-4 w-4 text-muted-foreground" />
       </div>
     </div>

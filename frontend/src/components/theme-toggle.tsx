@@ -14,7 +14,7 @@ const CustomThemeToggle = ({ className = "" }: { className?: string }) => {
     <button
       type="button"
       className={cn(
-        "size-12 rounded-full p-2 transition-all duration-300 active:scale-95",
+        "size-10 sm:size-12 rounded-full p-2 transition-all duration-300 active:scale-95",
         isDark ? "bg-black text-white" : "bg-white text-black",
         className,
       )}
@@ -69,7 +69,7 @@ const CustomThemeToggle = ({ className = "" }: { className?: string }) => {
 
 const SimpleToggle = () => {
   return (
-    <div className="flex items-center justify-center p-8">
+    <div className="flex items-center justify-center">
       <CustomThemeToggle />
     </div>
   );

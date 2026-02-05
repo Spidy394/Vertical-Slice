@@ -74,7 +74,7 @@ export function InfiniteProductList({
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -83,9 +83,9 @@ export function InfiniteProductList({
       {hasMore && (
         <div
           ref={loaderRef}
-          className="flex justify-center items-center mt-12 py-8"
+          className="flex justify-center items-center mt-8 sm:mt-10 lg:mt-12 py-6 sm:py-8"
         >
-          <Loader2 className="h-7 w-7 animate-spin text-muted-foreground" />
+          <Loader2 className="h-6 w-6 sm:h-7 sm:w-7 animate-spin text-muted-foreground" />
         </div>
       )}
     </>

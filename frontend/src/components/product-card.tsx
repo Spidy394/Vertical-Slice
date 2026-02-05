@@ -42,16 +42,16 @@ export function ProductCard({ product, className }: ProductCardProps) {
       className={cn(
         "overflow-hidden flex flex-col h-full bg-card border-0",
         "shadow-md hover:shadow-xl transition-all duration-300",
-        "rounded-3xl p-4 group/card",
+        "rounded-2xl sm:rounded-3xl p-3 sm:p-4 group/card",
         className,
       )}
     >
       {/* Image */}
       <div
-        className="aspect-square relative overflow-hidden bg-muted/40 rounded-2xl mb-4 cursor-pointer"
+        className="aspect-square relative overflow-hidden bg-muted/40 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 cursor-pointer"
         onClick={handleImageClick}
       >
-        <div className="absolute top-3 left-3 right-3 z-10 flex items-center justify-between">
+        <div className="absolute top-2 sm:top-3 left-2 sm:left-3 right-2 sm:right-3 z-10 flex items-center justify-between">
           <div
             className={cn(
               "px-3 py-1.5 rounded-lg text-xs font-medium backdrop-blur-sm",
@@ -88,7 +88,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           src={product.imageUrl}
           alt={product.title}
           fill
-          className="object-cover p-2 transition-transform duration-300 group-hover/card:scale-105 rounded-2xl"
+          className="object-cover p-1.5 sm:p-2 transition-transform duration-300 group-hover/card:scale-105 rounded-xl sm:rounded-2xl"
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           loading="lazy"
           unoptimized={process.env.NODE_ENV === "development"}
@@ -96,10 +96,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-3 flex-1">
+      <div className="flex flex-col gap-2 sm:gap-3 flex-1">
         {/* Product Title */}
         <h3
-          className="font-semibold text-lg leading-snug line-clamp-2 text-foreground"
+          className="font-semibold text-base sm:text-lg leading-snug line-clamp-2 text-foreground"
           title={product.title}
         >
           {product.title}
@@ -107,8 +107,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
         {/* Price */}
         <div className="mt-auto">
-          <div className="text-xs text-muted-foreground mb-1">Price</div>
-          <div className="text-xl font-bold text-primary">
+          <div className="text-[10px] sm:text-xs text-muted-foreground mb-0.5 sm:mb-1">
+            Price
+          </div>
+          <div className="text-lg sm:text-xl font-bold text-primary">
             {product.price.toFixed(2)} AED
           </div>
         </div>
@@ -119,10 +121,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
             href={product.productUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3"
+            className="mt-2 sm:mt-3"
           >
             <Button
-              className="w-full h-12 rounded-full font-medium text-base bg-foreground text-background hover:bg-foreground/90"
+              className="w-full h-10 sm:h-12 rounded-full font-medium text-sm sm:text-base bg-foreground text-background hover:bg-foreground/90 active:scale-95 transition-transform"
               size="lg"
             >
               Buy Now
@@ -131,7 +133,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
         ) : (
           <Button
             disabled
-            className="w-full h-12 rounded-full font-medium text-base mt-3"
+            className="w-full h-10 sm:h-12 rounded-full font-medium text-sm sm:text-base mt-2 sm:mt-3"
             size="lg"
           >
             Out of Stock
@@ -142,16 +144,16 @@ export function ProductCard({ product, className }: ProductCardProps) {
       {/* Image Preview Modal */}
       {showPreview && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           onClick={handleClosePreview}
         >
-          <div className="relative w-[90vw] h-[90vh] max-w-4xl max-h-4xl">
+          <div className="relative w-full h-full max-w-4xl max-h-[90vh]">
             <Image
               src={product.imageUrl}
               alt={product.title}
               fill
               className="object-contain"
-              sizes="90vw"
+              sizes="(max-width: 768px) 95vw, 90vw"
               unoptimized={process.env.NODE_ENV === "development"}
             />
           </div>
