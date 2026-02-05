@@ -20,7 +20,7 @@ export default async function Home(props: {
   return (
     <div className="bg-background min-h-screen">
       {/* Minimalist Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Header Section */}
         <header className="mb-6 sm:mb-8 lg:mb-12">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
